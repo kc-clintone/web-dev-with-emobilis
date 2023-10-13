@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/form.css" />
+		<title>forms</title>
+	</head>
+	<body>
+		<h2 class="heading">Register</h2>
+		<form action="#">
+			<label for="fname">First Name</label>
+			<input
+				class="inputs"
+				type="text"
+				id="fname"
+				name="first_name"
+				placeholder="Jane"
+				required
+			/><br />
+
+			<label for="sname">Second Name</label>
+			<input
+				class="inputs"
+				type="text"
+				id="sname"
+				name="second_name"
+				placeholder="Doe"
+				required
+			/><br />
+
+			<label for="email">Email Address</label>
+			<input
+				class="inputs"
+				type="email"
+				id="email"
+				name="email_address"
+				placeholder="example@mail.com"
+				required
+			/>
+			<span>
+				<label for="male">Male: </label>
+				<input type="radio" id="male" name="selected" />
+
+				<label for="female">Female: </label>
+				<input type="radio" id="female" name="selected" />
+
+				<label for="other">Other: </label>
+				<input type="radio" id="other" name="selected" /> </span
+			><br />
+
+			<label for="dob">DoB</label>
+			<input type="date" id="dob" name="dob" class="inputs" /><br />
+
+			<label for="profile">profile picture: </label><br />
+			<input
+				type="file"
+				id="profile"
+				name="profile"
+				required
+				class="file"
+			/><br />
+
+			<label for="courses">Courses: </label>
+			<select name="courses" id="courses" class="courses">
+				<option value="java">java</option>
+				<option value="js">javascript</option>
+				<option value="ML">machine learning</option>
+				<option value="git">git and github</option>
+				<option value="kotlin">kotlin</option>
+				<option value="web">webdev</option>
+			</select>
+			<br />
+
+			<input type="submit" value="register" class="btn" />
+		</form>
+	</body>
+</html>

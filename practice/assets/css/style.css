@@ -1,0 +1,18 @@
+table {
+	width: 80%;
+	margin: 0 auto;
+}
+tr,
+th {
+	padding: 5px;
+}
+thead {
+	background-color: black;
+	color: white;
+}
+tbody {
+	background-color: grey;
+}
+tbody tr:nth-child(odd) {
+	color: orange;
+}

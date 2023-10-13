@@ -1,0 +1,19 @@
+.section-1 {
+	width: auto;
+	background-color: green;
+}
+.section-2 {
+	width: auto;
+	background-color: orange;
+}
+.section-3 {
+	width: auto;
+	background-color: blue;
+}
+
+.banner img {
+	width: 200px;
+	height: 160px;
+	display: block;
+	margin: 0 auto;
+}
