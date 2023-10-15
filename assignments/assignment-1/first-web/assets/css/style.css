@@ -453,7 +453,7 @@ section {
 }
 
 .section-bg {
-	background-color: #fef8f5;
+	background-color: #ffffff;
 }
 
 .section-title {
@@ -701,7 +701,7 @@ section {
 	background-color: #fff;
 	padding-top: 6px;
 	padding-right: 1px;
-	border-radius: 50px;
+	border-radius: 0.2rem;
 	text-align: center;
 	width: 32px;
 	height: 32px;
