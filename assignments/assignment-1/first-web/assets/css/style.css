@@ -667,7 +667,7 @@ section {
 
 .portfolio .portfolio-wrap::before {
 	content: '';
-	background: rgba(122, 105, 96, 0.6);
+	background: rgba(204, 107, 55, 0.6);
 	position: absolute;
 	left: 100%;
 	right: 0;
@@ -1331,7 +1331,7 @@ section {
 	line-height: 1;
 	padding: 8px 0;
 	margin-right: 4px;
-	border-radius: 50%;
+	border-radius: 8px;
 	text-align: center;
 	width: 36px;
 	height: 36px;
