@@ -1,11 +1,3 @@
-/**
-* Template Name: Ninestars
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -162,11 +154,11 @@ h6,
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #eb5d1e;
+  background: #ee5818;
   color: #fff;
   padding: 10px 25px;
   margin-left: 30px;
-  border-radius: 50px;
+  border-radius: 15px;
 }
 
 .navbar .getstarted:hover,
@@ -174,8 +166,9 @@ h6,
   color: #fff;
   background: #ee7843;
 }
+/* !========removed code========= */
 
-.navbar .dropdown ul {
+/*.navbar .dropdown ul {
   display: block;
   position: absolute;
   left: 14px;
@@ -237,8 +230,9 @@ h6,
   .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
-}
+} */
 
+/* !=======end of removed code========== */
 /**
 * Mobile Navigation 
 */
