@@ -1,0 +1,5 @@
+Encapsulation is the concept of bundling data (attributes) and methods (functions) that operate on that data into a single unit, the class. In Python, encapsulation is achieved through public, protected, and private attributes and methods.
+
+Public attributes and methods are accessible from outside the class.
+Protected attributes and methods are indicated with a single underscore (e.g., _protected_variable) and are considered non-public (but not enforced).
+Private attributes and methods are indicated with a double underscore (e.g., __private_variable) and are name-mangled to make them less accessible.
