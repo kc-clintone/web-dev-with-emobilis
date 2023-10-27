@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<title>Django framewrok</title>
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+
+		<!-- Favicons -->
+		<link href="{% static 'assets/img/logo.png' %}" rel="icon" />
+		<!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+
+		<!-- CSS Files -->
+		<link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet" />
+		<!-- Bootstrap -->
+		<link
+			href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}"
+			rel="stylesheet"
+		/>
+		<!-- Bootstrap icons -->
+		<link
+			href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}"
+			rel="stylesheet"
+		/>
+		<!-- Boxicons -->
+		<link
+			href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}"
+			rel="stylesheet"
+		/>
+		<!-- Glighticons -->
+		<link
+			href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}"
+			rel="stylesheet"
+		/>
+		<!-- swiper css -->
+		<link
+			href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}"
+			rel="stylesheet"
+		/>
+
+		<!-- Main CSS File -->
+		<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" />
+	</head>
+
+	<body>
+		<!-- ======= Header ======= -->
+		<header id="header" class="fixed-top d-flex align-items-center">
+			<div
+				class="container d-flex align-items-center justify-content-between"
+			>
+				<div class="logo">
+					<h1 class="text-light">
+						<a href="{% url 'index' %}"><span>Django Development</span></a>
+					</h1>
+				</div>
+
+				<nav id="navbar" class="navbar">
+					<ul>
+						<li>
+							<a class="nav-link scrollto active" href="#hero"
+								>Home</a
+							>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#about">About</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#services"
+								>Services</a
+							>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#portfolio"
+								>Portfolio</a
+							>
+						</li>
+
+						<li>
+							<a class="nav-link scrollto" href="#contact"
+								>Contact</a
+							>
+						</li>
+						<li>
+							<a class="getstarted scrollto" href="#about"
+								>Get Started</a
+							>
+						</li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+				<!-- .navbar -->
+			</div>
+		</header>
+		<!-- End Header -->
+
+		<!-- ======= Hero Section ======= -->
+		<section id="hero" class="d-flex align-items-center">
+			<div class="container">
+				<div class="row gy-4">
+					<div
+						class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
+					>
+						<h1>
+							Build high-end web applications and with django and bootstrap
+						</h1>
+						<h2>
+							Do you want scalable, high-end, powerful and secure software applications?
+							Then take a look at the django framework to get started
+						</h2>
+						<div>
+							<a href="#about" class="btn-get-started scrollto"
+								>Get started</a
+							>
+						</div>
+					</div>
+					<div class="col-lg-6 order-1 order-lg-2 hero-img">
+						<img
+							src="{% static 'assets/img/hero-img.svg' %}"
+							class="img-fluid animated"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Hero -->
+
+		<main id="main">
+			<!-- ======= About Section ======= -->
+			<section id="about" class="about">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div
+							class="col-lg-5 d-flex align-items-center justify-content-center about-img"
+						>
+							<img
+								src="{% static 'assets/img/about-img.svg' %}"
+								class="img-fluid"
+								alt=""
+								data-aos="zoom-in"
+							/>
+						</div>
+						<div class="col-lg-6 pt-5 pt-lg-0">
+							<h3 data-aos="fade-up">
+								Security? We've got you!
+							</h3>
+							<p data-aos="fade-up" data-aos-delay="100">
+								You need secure software applications?, worry no
+								more, you are in the right place. We create
+								elegant, good looking and secure software applications.
+								Contact us if you are in need of magnificent
+								work of art
+							</p>
+							<div class="row">
+								<div
+									class="col-md-6"
+									data-aos="fade-up"
+									data-aos-delay="100"
+								>
+									<i class="bx bx-receipt"></i>
+									<h4>Mobile apps</h4>
+									<p>
+										Our mobile applications are well
+										compatible with a lot of devices and
+										work well through out every device.
+									</p>
+								</div>
+								<div
+									class="col-md-6"
+									data-aos="fade-up"
+									data-aos-delay="200"
+								>
+									<i class="bx bx-cube-alt"></i>
+									<h4>Web apps & Desktop apps</h4>
+									<p>
+										We build excelent cross-platform
+										applcations that are compatible with
+										every OS
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End About Section -->
+
+			<!-- ======= Services Section ======= -->
+			<section id="services" class="services section-bg">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title">
+						<h2>Our Services</h2>
+						<p>Check out some of our well known services</p>
+					</div>
+
+					<div class="row">
+						<div
+							class="col-md-6 col-lg-3 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="100"
+						>
+							<div class="icon-box">
+								<div class="icon">
+									<i class="bx bxl-dribbble"></i>
+								</div>
+								<h4 class="title">
+									<a href="">Creativity</a>
+								</h4>
+								<p class="description">
+									We have a team of creative devs that are
+									always ready to tackle every problem with
+									creativity and deliver quality apps
+								</p>
+							</div>
+						</div>
+
+						<div
+							class="col-md-6 col-lg-3 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="200"
+						>
+							<div class="icon-box">
+								<div class="icon">
+									<i class="bx bx-file"></i>
+								</div>
+								<h4 class="title">
+									<a href="">Templates</a>
+								</h4>
+								<p class="description">
+									We have a number of top-notch templates that
+									will help you get started. You can
+									customizethe templates to your needs
+								</p>
+							</div>
+						</div>
+
+						<div
+							class="col-md-6 col-lg-3 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="300"
+						>
+							<div class="icon-box">
+								<div class="icon">
+									<i class="bx bx-tachometer"></i>
+								</div>
+								<h4 class="title">
+									<a href="">Timely updates</a>
+								</h4>
+								<p class="description">
+									We do hot reloads of your application and
+									you will never notice anything. You will
+									never be inconvinieced by these updates, we
+									ensure you smooth experience.
+								</p>
+							</div>
+						</div>
+
+						<div
+							class="col-md-6 col-lg-3 d-flex align-items-stretch"
+							data-aos="zoom-in"
+							data-aos-delay="400"
+						>
+							<div class="icon-box">
+								<div class="icon">
+									<i class="bx bx-world"></i>
+								</div>
+								<h4 class="title">
+									<a href="">Cheap hosting</a>
+								</h4>
+								<p class="description">
+									Did you know that we do hosting too? Yeah,
+									that's right. We give you enough resources
+									to host your applications and also do the
+									rest for you.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Services Section -->
+
+			<!-- ======= Portfolio Section ======= -->
+			<section id="portfolio" class="portfolio">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title">
+						<h2>Portfolio</h2>
+						<p>Check out our beautifull portfolio</p>
+					</div>
+
+					<div class="row" data-aos="fade-up" data-aos-delay="100">
+						<div class="col-lg-12">
+							<ul id="portfolio-flters">
+								<li data-filter="*" class="filter-active">
+									All
+								</li>
+								<li data-filter=".filter-app">App</li>
+								<li data-filter=".filter-card">Card</li>
+								<li data-filter=".filter-web">Web</li>
+							</ul>
+						</div>
+					</div>
+
+					<div
+						class="row portfolio-container"
+						data-aos="fade-up"
+						data-aos-delay="200"
+					>
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-app"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-1.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="App 1"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>App 1</h4>
+									<p>App</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-web"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-2.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Web 3"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Web 3</h4>
+									<p>Web</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-app"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-3.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="App 2"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>App 2</h4>
+									<p>App</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-card"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-4.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-4.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Card 2"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Card 2</h4>
+									<p>Card</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-web"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-5.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-5.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Web 2"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Web 2</h4>
+									<p>Web</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-app"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-6.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-6.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="App 3"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>App 3</h4>
+									<p>App</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-card"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-7.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-7.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Card 1"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Card 1</h4>
+									<p>Card</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-card"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-8.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-8.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Card 3"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Card 3</h4>
+									<p>Card</p>
+								</div>
+							</div>
+						</div>
+
+						<div
+							class="col-lg-4 col-md-6 portfolio-item filter-web"
+						>
+							<div class="portfolio-wrap">
+								<img
+									src="{% static 'assets/img/portfolio/portfolio-9.jpg' %}"
+									class="img-fluid"
+									alt=""
+								/>
+								<div class="portfolio-links">
+									<a
+										href="{% static 'assets/img/portfolio/portfolio-9.jpg' %}"
+										data-gallery="portfolioGallery"
+										class="portfolio-lightbox"
+										title="Web 3"
+										><i class="bi bi-eye"></i
+									></a>
+									<a
+										href="#"
+										title="More Details"
+										><i class="bi bi-link"></i
+									></a>
+								</div>
+								<div class="portfolio-info">
+									<h4>Web 3</h4>
+									<p>Web</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Portfolio Section -->
+
+			<!-- ======= F.A.Q Section ======= -->
+			<section id="faq" class="faq section-bg">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title">
+						<h2>F.A.Q</h2>
+						<p>Frequently Asked Questions</p>
+					</div>
+
+					<ul
+						class="faq-list"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								class="collapsed question"
+								href="#faq1"
+							>
+								What services does HP web developers offer?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq1"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									 
+
+We provide a wide range of web development services, including custom website design, frontend and backend development, mobile app development, e-commerce solutions, and more. We pride ourselves on delivering tailored solutions to meet your specific needs.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								href="#faq2"
+								class="collapsed question"
+							>
+								How do I get started with your web development services?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq2"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									Getting started is easy. Simply reach out to us through our contact form or email, and we'll schedule a consultation to discuss your project requirements. We'll work closely with you to understand your vision and provide a detailed project proposal.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								href="#faq3"
+								class="collapsed question"
+							>
+								What technologies do you specialize in?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq3"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									Our team of experienced developers excels in a variety of technologies, including React, React Native, JavaScript, Node.js, HTML, CSS, Python, Django, MongoDB, and Express, to name a few. We stay up to date with the latest tech trends to ensure your project's success.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								href="#faq4"
+								class="collapsed question"
+							>
+								What is the typical timeline for a web development project?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq4"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									The timeline varies depending on the complexity and scope of the project. We'll provide you with a detailed project schedule during our initial consultation, outlining key milestones and estimated project completion dates.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								href="#faq5"
+								class="collapsed question"
+							>
+								How does your pricing structure work?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq5"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									Our pricing is based on the specifics of your project. We offer competitive and transparent pricing, with no hidden fees. During our consultation, we'll provide you with a cost estimate and outline the payment structure.
+								</p>
+							</div>
+						</li>
+
+						<li>
+							<div
+								data-bs-toggle="collapse"
+								href="#faq6"
+								class="collapsed question"
+							>
+								 Do you offer ongoing support and maintenance services?
+								<i class="bi bi-chevron-down icon-show"></i
+								><i class="bi bi-chevron-up icon-close"></i>
+							</div>
+							<div
+								id="faq6"
+								class="collapse"
+								data-bs-parent=".faq-list"
+							>
+								<p>
+									Yes, we offer post-launch support and maintenance packages to ensure your website or application runs smoothly. Our team is available to address any issues, update content,
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- End F.A.Q Section -->
+
+			<!-- ======= Clients Section ======= -->
+			<section id="clients" class="clients section-bg">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title">
+						<h2>Clients</h2>
+						<p>Brands we've worked with</p>
+					</div>
+
+					<div
+						class="clients-slider swiper"
+						data-aos="fade-up"
+						data-aos-delay="100"
+					>
+						<div class="swiper-wrapper align-items-center">
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-1.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-2.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-3.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-4.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-5.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-6.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-7.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+							<div class="swiper-slide">
+								<img
+									src="{% static 'assets/img/clients/client-8.png' %}"
+									class="img-fluid"
+									alt=""
+								/>
+							</div>
+						</div>
+						<!-- <div class="swiper-pagination"></div> -->
+					</div>
+				</div>
+			</section>
+			<!-- End Clients Section -->
+
+			<!-- ======= Contact Us Section ======= -->
+			<section id="contact" class="contact">
+				<div class="container" data-aos="fade-up">
+					<div class="section-title">
+						<h2>Contact Us</h2>
+						<p>Contact us the get started</p>
+					</div>
+
+					<div class="row">
+						<div
+							class="col-lg-5 d-flex align-items-stretch"
+							data-aos="fade-up"
+							data-aos-delay="100"
+						>
+							<div class="info">
+								<div class="address">
+									<i class="bi bi-geo-alt"></i>
+									<h4>Location:</h4>
+									<p>123 Helm Street, Nairobi 00100</p>
+								</div>
+
+								<div class="email">
+									<i class="bi bi-envelope"></i>
+									<h4>Email:</h4>
+									<p>info@example.com</p>
+								</div>
+
+								<div class="phone">
+									<i class="bi bi-phone"></i>
+									<h4>Call:</h4>
+									<p>+254 9789 08345</p>
+								</div>
+								<div class="">
+								<iframe class="iframe"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255348.15589369187!2d34.57335227720748!3d-0.07462917323522304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182aa437ad4ac81d%3A0x2012a439d6248dd2!2sKisumu!5e0!3m2!1sen!2ske!4v1697460807306!5m2!1sen!2ske"
+									width: 350px;
+									height: 300px;
+									style="border: 0"
+									border-radius: 0.5rem;
+									allowfullscreen=""
+									loading="lazy"
+									referrerpolicy="no-referrer-when-downgrade"
+								></iframe>
+								</div>
+								
+
+							</div>
+						</div>
+
+						<div
+							class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch"
+							data-aos="fade-up"
+							data-aos-delay="200"
+						>
+							<form
+								action="forms/contact.php"
+								method="post"
+								role="form"
+								class="php-email-form"
+							>
+								<div class="row">
+									<div class="form-group col-md-6">
+										<label for="name">Name</label>
+										<input
+											type="text"
+											name="name"
+											class="form-control"
+											id="name"
+											placeholder="John Doe"
+											required
+										/>
+									</div>
+									<div
+										class="form-group col-md-6 mt-3 mt-md-0"
+									>
+										<label for="name">Email Address</label>
+										<input
+											type="email"
+											class="form-control"
+											name="email"
+											id="email"
+											placeholder="john@mail.com"
+											required
+										/>
+									</div>
+								</div>
+								<div class="form-group mt-3">
+									<label for="name">Subject</label>
+									<input
+										type="text"
+										class="form-control"
+										name="subject"
+										id="subject"
+										placeholder="I want to say something"
+										required
+									/>
+								</div>
+								<div class="form-group mt-3">
+									<label for="name">Message</label>
+									<textarea
+										class="form-control"
+										name="message"
+										rows="10"
+										required
+									></textarea>
+								</div>
+								<div class="my-3">
+									<div class="loading">Loading</div>
+									<div class="error-message"></div>
+									<div class="sent-message">
+										Your message has been sent. Thank you!
+									</div>
+								</div>
+								<div class="text-center">
+									<button type="submit">Send Message</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Contact Us Section -->
+		</main>
+		<!-- End #main -->
+
+		<!-- ======= Footer ======= -->
+		<footer id="footer">
+			<div class="footer-newsletter">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-6">
+							<h4>Signup for our Newsletter to be on the know</h4>
+							<p>
+								Get daily updates about our products  and services through direct emails.
+							</p>
+							<form action="" method="post">
+								<input type="email" name="email" /><input
+									type="submit"
+									value="Subscribe"
+								/>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 footer-contact">
+							<h3>HP web dev</h3>
+							<p>
+								Helm Street <br />
+								Nairobi 00100<br />
+								Kenya <br /><br />
+								<strong>Phone:</strong> +1 5589 09900 55<br />
+								<strong>Email:</strong> example@mail.com<br />
+							</p>
+						</div>
+
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Useful Links</h4>
+							<ul>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Home</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">About</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Services</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Terms of service</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Privacy policy</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Our Services</h4>
+							<ul>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Web Design</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Web Development</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Graphic Design</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Product Management</a>
+								</li>
+								<li>
+									<i class="bx bx-chevron-right"></i>
+									<a href="#">Marketing</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Our Social Networks</h4>
+							<p>
+								Find us across all social media platforms
+							</p>
+							<div class="social-links mt-3">
+								<a href="#" class="twitter"
+									><i class="bx bxl-twitter"></i
+								></a>
+								<a href="#" class="facebook"
+									><i class="bx bxl-facebook"></i
+								></a>
+								<a href="#" class="instagram"
+									><i class="bx bxl-instagram"></i
+								></a>
+								<a href="#" class="google-plus"
+									><i class="bx bxl-skype"></i
+								></a>
+								<a href="#" class="linkedin"
+									><i class="bx bxl-linkedin"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="container py-4">
+				<div class="copyright">
+					&copy; Copyright <strong><span>HP web devs</span></strong
+					>. All Rights Reserved
+				</div>
+				<div class="credits">
+					Designed by
+					<a
+						href="https://kc-clintone/web-dev-with-emobilis/assignments/assignment-2/web-app-with-django"
+						>clinton otieno</a
+					>
+				</div>
+			</div>
+		</footer>
+		<!-- End Footer -->
+
+		<a
+			href="#"
+			class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
+
+		<!-- Vendor JS Files -->
+		<script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+		<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+		<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+		<!-- Template Main JS File -->
+		<script src="{% static 'assets/js/main.js' %}"></script>
+	</body>
+</html>
