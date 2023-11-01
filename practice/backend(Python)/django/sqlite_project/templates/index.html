@@ -3,7 +3,28 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Todo App</title>
 	</head>
-	<body></body>
+	<body>
+		<h3>Todo CRUD</h3>
+		<button>
+			<a href="{%% url 'create_todo' }">Add Todo</a>
+		</button>
+
+		<ul>
+			{% for todo in todos %}
+			<li>
+				{{todo.title}}
+				<p>{{todo.description}}</p>
+				<span>
+					<button>
+						<a href="{% url 'update_todo' todo.id %}">Update</a>
+					</button>
+					<button>
+						<a href="{% url 'delete_todo' todo.id %}">Delete</a>
+					</button>
+				</span>
+			</li>
+		</ul>
+	</body>
 </html>
