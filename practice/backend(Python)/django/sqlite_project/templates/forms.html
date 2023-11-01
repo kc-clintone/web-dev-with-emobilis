@@ -3,7 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>add todo</title>
 	</head>
-	<body></body>
+	<body>
+		<h3>Create A ToDo now</h3>
+		<form action="todo/create/" method="post">
+			{% csrf_token %} {{form.as_p}}
+			<button type="submit">Save Todo</button>
+		</form>
+		<button>
+			<a href="{% url 'listTodos' %}">Discard</a>
+		</button>
+	</body>
 </html>
