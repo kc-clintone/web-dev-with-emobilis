@@ -62,3 +62,12 @@ password=this_password)
 		else:
 			return redirect('/login')
 	return render(request, 'login.html')
+
+def handleSignup(request):
+	if request.method == 'POST':
+		this_username=request.POST.get('username')
+		this_password=request.POST.get('password')
+		this_user=User.objects.create_user(this_username,
+this_password)
+		this_user.save()
+	return render(request, 'signup.html')
