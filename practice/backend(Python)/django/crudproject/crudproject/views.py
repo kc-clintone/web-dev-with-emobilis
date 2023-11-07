@@ -45,3 +45,20 @@ def deleteData(request, id):
 	deleteStud = Student.objects.get(id=id)
 	deleteStud.delete()
 	return redirect('/')
+
+def handleLogout(request):
+	logout(request, 'login.html')
+
+
+def handleLogin(request):
+	if request.method == 'POST':
+		this_username=request.POST.get('username')
+		this_password=request.POST.get('password')
+		this_user=authenticate(username=this_username,
+password=this_password)
+		if this_user is not None:
+			login(request, this_user)
+			return redirect('/')
+		else:
+			return redirect('/login')
+	return render(request, 'login.html')
