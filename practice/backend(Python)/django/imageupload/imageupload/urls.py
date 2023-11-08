@@ -25,3 +25,6 @@ urlpatterns = [
     path('', views.upload_image, name='uploadImg'),
     path('view_images/', views.view_images, name='viewImages')
 ]
+
+if settings.DEBUG:
+	urlpatterns += static(settings.MEDIA_URL, documment_root=settings.MEDIA_ROOT)
