@@ -7,12 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post" enctype="multipart/form-data>
-{% csrf_token %}
-{{ form.as_p }}
-
-<input type='submit' value='Upload'>
-</form>
-<a href="{% url 'viewImages' %}">View Images</a>
+<h3>My gallery</h3><br>
+<ul>
+{% for image in images %}
+<li>
+<p>Title: </p>
+<img src="{{ image.image.url }}" alt="{{ image.title }}">
+</li>
+{% endfor %}
+<a href="{% url 'uploadImg' %}">Upload Images</a>
 </body>
 </html>
