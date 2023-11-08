@@ -1,4 +1,4 @@
-from django.shortcuts import render, request
+from django.shortcuts import render, redirect
 from .models import Image
 from .forms import UploadForm
 
@@ -12,6 +12,6 @@ def upload_image(request):
 		this_form=UploadForm()
 		return render(request, 'uploadImg.html', {'form':this_form})
 
-ded view_images(request):
+def view_images(request):
 	all_images=Image.objects.all()
 	return render(request, 'viewImages.html', {'images':all_images})
