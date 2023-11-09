@@ -1,5 +1,5 @@
 """
-URL configuration for crudproject project.
+URL configuration for apitutorial project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,16 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.home, name='index'),
-    path('insert', views.insertData, name ='insertData'),
-    path('update/<id>', views.updateData, name='deleteData'),
-    path('delete/<id>', views.deleteData, name='deleteData'),
-
-    path('logout', views.handleLogout, name='handleLogout'),
-    path('login', views.handleLogin, name='handleLoging'),
-    path('signup', views.handleSignup, name='handleSignup')
 ]
