@@ -4,8 +4,7 @@ from .forms import TodoForm
 
 def list_all_todos(request):
 	todos=ToDo.objects.all()
-	return render(request, index.html, {'tasks':todos})
-
+	return render(request, 'index.html', {'tasks':todos})
 
 def create_a_todo(request):
 	if request.method == 'POST':

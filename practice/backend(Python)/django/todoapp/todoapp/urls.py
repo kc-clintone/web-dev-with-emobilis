@@ -20,5 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.),
+    path('', views.list_all_todos, name='mytodos'),
+    path('todo/add/', views.create_a_todo, name='add'),
+    path('todo/update/<int:id>', views.update_a_todo, name='update'),
+    path('todo/delete/<int:id>', views.delete_a_todo, name='delete'),
 ]
