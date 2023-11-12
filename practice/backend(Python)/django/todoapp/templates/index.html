@@ -4,11 +4,10 @@
     <meta charset="UTF-8">  
     <title>Index</title>
 </head>  
-<body>  
-<form method="POST" action="">  
+<body>
  <h1>My Todos</h1><br>
  <button><a href='{% url 'create' %}'>Add Todo</a></button>
- <ul>
+<br> <ul>
     {% for todo in todos %}
       <li>{todo.todo}</li>
       <p>{todo.description}</p>
@@ -16,6 +15,5 @@
       <button><a href='{% url 'delete' todo.id %}'>Delete</a></button>
     {% endfor %}
  </ul>
-</form>  
 </body>  
 </html>  
