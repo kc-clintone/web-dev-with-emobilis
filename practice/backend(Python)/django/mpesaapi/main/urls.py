@@ -1,9 +1,9 @@
 from django.urls import path
 
-from stkpush import views
+from main import views
 
 
-app_name = "stkpush"
+app_name = "main"
 
 urlpatterns = [
     path('', views.home, name="home"),
