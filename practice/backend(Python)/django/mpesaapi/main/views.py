@@ -14,8 +14,8 @@ def home(request):
 
 
 def token(request):
-    consumer_key = '77bgGpmlOxlgJu6oEXhEgUgnu0j2WYxA'
-    consumer_secret = 'viM8ejHgtEmtPTHd'
+    consumer_key = 'wrMEhpEsu17ODht6XJoWlPx40G6ApfzL'
+    consumer_secret = 'u0Gkcxtj9fMSRWli'
     api_URL = 'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials'
 
     r = requests.get(api_URL, auth=HTTPBasicAuth(
