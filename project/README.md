@@ -1,19 +1,20 @@
-#Learning Management System
+# Learning Management System
 
-##Contents
+## Contents
+
 [introduction](Introduction)
 [Description](Description)
 
 
-#---
-###Introduction
+# ---
+### Introduction
 This is a final project activity for the emobilis web develipment bootcamp where
  I've learnt to build scalable, reliable, robust and maintainable web sites and webapps using Django and other technologies.
 
 This project is to demonstrate the skills I have gathered throughout the course.
  
-#--
-###Description
+# --
+### Description
 Frontend with Next.js and Bootstrap:
 I will be utilising Next.js for the frontend to take advantage of its React-based framework for building robust and efficient web applications. I will use bootstrap to ensure a responsive and visually appealing user interface. Leveraging Bootstrap's pre-designed components for a consistent and user-friendly design. Implementing features like course listings, user profiles, and interactive lessons.
 
