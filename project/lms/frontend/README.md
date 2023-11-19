@@ -1,1 +1,0 @@
-# LMS - the frintend app
