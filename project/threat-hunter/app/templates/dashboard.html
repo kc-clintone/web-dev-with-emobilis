@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% load static %}
+		<link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About</title>
+		<style>
+			.divider {
+				height: 0.3px;
+				background-color: rgba(0, 0, 0, 0.1);
+				border: solid rgba(0, 0, 0, 0.15);
+				border-width: 0.4px 0;
+				box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+					inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+			}
+		</style>
+	</head>
+	<body>
+		<header class="d-flex justify-content-center py-3">
+			<ul class="nav nav-pills">
+				<li class="nav-item">
+					<a href="{% url 'home' %}" class="nav-link">Home</a>
+				</li>
+				<li class="nav-item">
+					<a
+						href="{% url 'about' %}"
+						class="nav-link active"
+						aria-current="page"
+						>Dashboard</a
+					>
+				</li>
+			</ul>
+		</header>
+		<div class="divider"></div>
+		<div class="container mt-5">
+			<h2>Activities</h2>
+			<p>
+				This page will contain all your activities once any is available.
+			</p>
+		</div>
+		<script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+	</body>
+</html>
