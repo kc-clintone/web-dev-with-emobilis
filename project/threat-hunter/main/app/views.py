@@ -2,26 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("this is home")
+    return render(request, 'app/index.html')
 
 def dashboard(request):
-    pass
-
-def upload_extension(request):
-    if request.method == 'POST':
-        form = ExtensionUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.save()
-            # Add bug detection logic here
-            return redirect('result_page')
-    else:
-        form = ExtensionUploadForm()
-
-    return render(request, 'upload_extension.html', {'form': form})
-
+    return render(request, 'app/dashboard.html')
 
 def signup(request):
-    pass
+    return render(request, 'app/signup.html')
 
 def signin(request):
-    pass
+    return render(request, 'app/signin.html')
