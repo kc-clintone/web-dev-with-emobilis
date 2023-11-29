@@ -2,13 +2,13 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 def home(request):
-    return render(request, 'app/index.html')
+    return render(request, 'index.html')
 
 def dashboard(request):
-    return render(request, 'app/dashboard.html')
+    return render(request, 'dashboard.html')
 
 def signup(request):
-    return render(request, 'app/signup.html')
+    return render(request, 'signup.html')
 
 def signin(request):
-    return render(request, 'app/signin.html')
+    return render(request, 'signin.html')
