@@ -4,6 +4,9 @@ from django.http import HttpResponse
 def home(request):
     pass
 
+def dashboard(request):
+    pass
+
 def upload_extension(request):
     if request.method == 'POST':
         form = ExtensionUploadForm(request.POST, request.FILES)
