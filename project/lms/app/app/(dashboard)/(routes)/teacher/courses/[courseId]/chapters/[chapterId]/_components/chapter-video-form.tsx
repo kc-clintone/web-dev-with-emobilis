@@ -97,7 +97,7 @@ export const ChapterVideoForm = ({
       )}
       {initialData.videoUrl && !isEditing && (
         <div className="text-xs text-muted-foreground mt-2">
-          Videos can take a few minutes to process. Refresh the page if video does not appear.
+          Videos may take a few minutes to process. Refresh the page if video does not appear.
         </div>
       )}
     </div>
