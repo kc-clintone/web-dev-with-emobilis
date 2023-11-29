@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import ExtensionUploadForm
 from .models import UploadedExtension
-
+from django.http import HttpResponse
 
 
 def upload_extension(request):
