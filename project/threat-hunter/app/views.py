@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm, ExtensionUploadForm
-from . import code_analysis
+from .code_analysis import analyze_code_with_bandit
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 import subprocess
@@ -11,8 +11,8 @@ def home(request):
         if this_form.is_valid():
             home = this_form.save()
             # Perform static code analysis using Bandit
-            analyze_code_with_bandit(uploaded_extension.file.path)
-            #return redirect('result_page')
+            vulnerabilities = analyze_code_with_bandit(home.file.path)
+            return redirect('result_page', vulnerabilities=vulnerabilities)
     else:
         this_form = ExtensionUploadForm()
 
@@ -21,6 +21,9 @@ def home(request):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+def result_page(request, vulnerabilities):
+    return render(request, 'result_page.html', context={'vulnerabilities': vulnerabilities})
 
 def signup(request):
     this_form = CreateUserForm()

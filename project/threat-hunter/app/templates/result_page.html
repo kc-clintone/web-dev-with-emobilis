@@ -26,7 +26,7 @@
                 <div class="container mt-5">
 
     <h2>Analysis Results</h2>
-    {% if vulnerabilities %}
+    {% if vulnerabilities == none%}
         <p>Vulnerabilities found:</p>
         <ul>
             {% for vulnerability in vulnerabilities %}
