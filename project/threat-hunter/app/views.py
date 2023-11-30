@@ -10,7 +10,7 @@ def dashboard(request):
 def signup(request):
     this_form = CreateUserForm()
 
-    if request.method == "POST"
+    if request.method == "POST":
         this_form = CreateUserForm(request.POST)
         if this_form.is_valid():
             this_form.save()
