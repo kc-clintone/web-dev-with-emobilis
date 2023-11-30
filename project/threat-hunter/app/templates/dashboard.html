@@ -18,27 +18,17 @@
 		</style>
 	</head>
 	<body>
-		<header class="d-flex justify-content-center py-3">
+		<header class="d-flex justify-content-between p-3">
+			<h3>Threat hunter</h3>
 			<ul class="nav nav-pills">
 				<li class="nav-item">
 					<a href="{% url 'home' %}" class="nav-link">Home</a>
-				</li>
-				<li class="nav-item">
-					<a
-						href="{% url 'dashboard' %}"
-						class="nav-link active"
-						aria-current="page"
-						>Dashboard</a
-					>
 				</li>
 			</ul>
 		</header>
 		<div class="divider"></div>
 		<div class="container mt-5">
 			<h2>Activities</h2>
-			<p>
-				This page will contain all your activities once any is available.
-			</p>
 		</div>
 		<script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
 	</body>

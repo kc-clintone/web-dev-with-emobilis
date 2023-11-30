@@ -18,17 +18,24 @@
                 </style>
         </head>
         <body>
-                <header class=" p-3">
-			<h>Threat hunter</h3>
+                <header class="d-flex justify-content-between p-3">
+ 			<h3>threat hunter</h3>
+			<a href="{% url 'home'%}" class="btn btn-secondary">Home</a>
                 </header>
                 <div class="divider"></div>
                 <div class="container mt-5">
-                <h2>Upload a file</h2>
-    		<form method="post" enctype="multipart/form-data">
-        	    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="btn btn-primary" type="submit">Upload</button>
-                </form>
+
+    <h2>Analysis Results</h2>
+    {% if vulnerabilities %}
+        <p>Vulnerabilities found:</p>
+        <ul>
+            {% for vulnerability in vulnerabilities %}
+                <li>{{ vulnerability }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No vulnerabilities found.</p>
+    {% endif %}
                 </div>
                 <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
         </body>
