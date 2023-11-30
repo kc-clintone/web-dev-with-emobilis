@@ -1,9 +1,46 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm, ExtensionUploadForm
-from .code_analysis import analyze_code_with_bandit
+#from .code_analysis import analyze_code_with_bandit
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 import subprocess
+import json
+
+def analyze_code_with_bandit(file_path):
+    command = f"bandit -r {file_path} --format json"
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output, error = process.communicate()
+
+    if process.returncode != 0:
+        # Handle errors if necessary
+        print(f"Bandit analysis failed with error: {error.decode('utf-8')}")
+        return []
+
+    # Parse JSON output for detailed results
+    vulnerabilities = parse_bandit_output(output)
+    return vulnerabilities
+
+def parse_bandit_output(output):
+    try:
+        json_data = json.loads(output.decode('utf-8'))
+        # Extract and process information from the JSON data
+        vulnerabilities = []
+        for result in json_data['results']:
+            vulnerability = {
+                'filename': result['filename'],
+                'line': result['line'],
+                'code': result['code'],
+                'issue_text': result['issue_text'],
+                'severity': result['issue_severity'],
+            }
+            vulnerabilities.append(vulnerability)
+
+        return vulnerabilities
+    except json.JSONDecodeError as e:
+        # Handle JSON parsing errors
+        print(f"Error parsing Bandit output: {e}")
+        return []
+
 
 def home(request):
     if request.method == 'POST':

@@ -25,12 +25,18 @@
                 <div class="divider"></div>
                 <div class="container mt-5">
 
-    <h2>Analysis Results</h2>
-    {% if vulnerabilities == none%}
+                <h2>Analysis Results</h2>
+                {% if vulnerabilities %}
         <p>Vulnerabilities found:</p>
         <ul>
             {% for vulnerability in vulnerabilities %}
-                <li>{{ vulnerability }}</li>
+                <li>
+                    <strong>Filename:</strong> {{ vulnerability.filename }}<br>
+                    <strong>Line:</strong> {{ vulnerability.line }}<br>
+                    <strong>Code:</strong> {{ vulnerability.code }}<br>
+                    <strong>Issue:</strong> {{ vulnerability.issue_text }}<br>
+                    <strong>Severity:</strong> {{ vulnerability.severity }}<br>
+                </li>
             {% endfor %}
         </ul>
     {% else %}
