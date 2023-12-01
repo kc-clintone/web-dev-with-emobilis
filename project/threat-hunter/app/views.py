@@ -1,10 +1,23 @@
 from django.shortcuts import render, redirect
 from .forms import CreateUserForm, LoginForm, ExtensionUploadForm
-#from .code_analysis import analyze_code_with_bandit
+#code analysi with bandit
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
 import subprocess
 import json
+#code analysis with AI
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+import torch
+
+def analyze_code_with_codebert(code_snippet):
+    model_name = "microsoft/codebert-base"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForSequenceClassification.from_pretrained(model_name)
+
+    tokens = tokenizer.encode_plus(code_snippet, return_tensors="pt", padding=True, truncation=True)
+    with torch.no_grad():
+        embeddings = model(**tokens).last_hidden_state
+
 
 def analyze_code_with_bandit(file_path):
     command = f"bandit -r {file_path} --format json"
@@ -41,15 +54,20 @@ def parse_bandit_output(output):
         print(f"Error parsing Bandit output: {e}")
         return []
 
-
 def home(request):
+    subscribed = False
     if request.method == 'POST':
         this_form = ExtensionUploadForm(request.POST, request.FILES)
         if this_form.is_valid():
             home = this_form.save()
-            # Perform static code analysis using Bandit
-            vulnerabilities = analyze_code_with_bandit(home.file.path)
-            return redirect('result_page', vulnerabilities=vulnerabilities)
+            if subscribed == True:
+                # Deeper code analysis using BERT
+                code_content = uploaded_extension.file.read().decode('utf-8')
+                analyze_code_with_codebert(code_content)
+            else:
+                # Perform static code analysis using Bandit
+                vulnerabilities = analyze_code_with_bandit(home.file.path)
+                return redirect('result_page', vulnerabilities=vulnerabilities)
     else:
         this_form = ExtensionUploadForm()
 
