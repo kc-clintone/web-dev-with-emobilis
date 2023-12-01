@@ -15,14 +15,20 @@
   <body class="text-center">
 
 <main class="form-signup">
-  <form>
+  <form method="POST">
     <h1 class="h3 mb-3 fw-normal">Sign in to your account</h1>
 
     {% csrf_token %}
-    {{form.as_p}}
-
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Email or username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Password</label>
+    </div>    
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2023, @clintone</p>
+    <p class="mt-5 mb-3 text-muted">&copy; 2023, threathunter</p>
   </form>
 </main>
 

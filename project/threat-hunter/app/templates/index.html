@@ -19,15 +19,15 @@
         </head>
         <body>
                 <header class=" p-3">
-			<h>Threat hunter</h3>
+			<h3>Threat hunter</h3>
                 </header>
                 <div class="divider"></div>
                 <div class="container mt-5">
                 <h2>Upload a file</h2>
     		<form method="post" enctype="multipart/form-data">
         	    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button class="btn btn-primary" type="submit">Analyze</button>
+                    
+                    <button class="btn btn-primary" type="submit">Start scan</button>
                 </form>
                 </div>
                 <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
