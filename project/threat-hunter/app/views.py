@@ -5,9 +5,35 @@ from .forms import ExtensionUploadForm, CreateUserForm, LoginForm
 #code analysi with bandit
 from django.contrib.auth.models import auth
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 import subprocess
 import json
 
+# code analysis with AI
+import openai
+
+@login_required
+def analyse_with_ai(request):
+    if request.method == 'POST':
+        user_code = request.POST.get('user_code')
+
+        openai.api_key = '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'
+        prompt = f"Review the following code and identify any syntax errors, potential security issues or improvements:\n\n{user_code}"
+
+        response = openai.Completion.create(
+            engine="text-davinci-003",
+            prompt=prompt,
+            max_tokens=300,
+            temperature=0.7,
+            n=1,
+        )
+
+        review_result = response.choices[0].text.strip()
+        return render(request, 'airesult.html', {'review_result': review_result})
+
+    return render(request, 'aiform.html')
+
+@login_required
 def analyze_code_with_bandit(file_path):
     command = f"bandit -r {file_path} --format json"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -21,6 +47,7 @@ def analyze_code_with_bandit(file_path):
     # Parse JSON output for detailed results
     vulnerabilities = parse_bandit_output(output)
     return vulnerabilities
+
 
 def parse_bandit_output(output):
     try:
@@ -43,6 +70,7 @@ def parse_bandit_output(output):
         print(f"Error parsing Bandit output: {e}")
         return []
 
+@login_required
 def home(request):
     subscribed = False
     if request.method == 'POST':
@@ -58,8 +86,13 @@ def home(request):
     return render(request, 'index.html', context = {'form':this_form})
 
 
+@login_required
 def result_page(request, vulnerabilities):
     return render(request, 'result_page.html', context={'vulnerabilities': vulnerabilities})
+
+@login_required
+def about(request):
+    return render(request, 'about.html')
 
 # -----user creation and authentication----
 
@@ -79,13 +112,17 @@ def signin(request):
     if request.method == "POST":
         this_form = LoginForm(request, data=request.POST)
         if this_form.is_valid():
-            this_email = request.POST.get('email')
+            this_username = request.POST.get('username')
             this_password = request.POST.get('password')
 
-            this_user = authenticate(request, email=this_email, password=this_password)
+            this_user = authenticate(request, username=this_username, password=this_password)
 
             if this_user is not None:
                 auth.login(request, this_user)
                 return redirect('home')
 
     return render(request, 'signin.html', context = {'form':this_form})
+
+def signout(request):
+    auth.logout(request)
+    return redirect('signin')

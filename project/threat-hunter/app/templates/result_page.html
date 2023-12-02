@@ -15,15 +15,25 @@
                                 box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
                                         inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
                         }
+			.main{ height: 73vh; }
                 </style>
         </head>
         <body>
                 <header class="d-flex justify-content-between p-3">
- 			<h3>threat hunter</h3>
-			<a href="{% url 'home'%}" class="btn btn-secondary">Home</a>
+ 			<h3>Threat hunter</h3>
+		 <div class="dropdown">
+                   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-list"></i>
+                   </button>                                                                                                                                                                        <ul class="dropdown-menu">
+                      <li><a href="{% url 'home' %}" class="dropdown-item" type="button">Home</a></li>
+                      <li><a href="{% url 'about' %}" class="dropdown-item" type="button">About</a></li>
+                      <li><a class="dropdown-item" href="{% url 'analyse_with_ai' %}" type="button">Use AI mode</a></li>
+                      <li><a href="{% url 'signout' %}" class="btn dropdown-item" type="button">Log out</a></li>
+                    </ul>
+                  </div>
                 </header>
                 <div class="divider"></div>
-                <div class="container mt-5">
+                <div class="container mt-5 main">
 
                 <h2>Analysis Results</h2>
                 {% if vulnerabilities %}
@@ -43,6 +53,12 @@
         <p>No vulnerabilities found.</p>
     {% endif %}
                 </div>
+		<footer class="footer mt-auto py-3 bg-light">
+                  <div class="container d-flex justify-content-between">
+                    <span class="text-muted text-primary">@clintone</span>
+                    <span class="text-muted">All rights reserved, &c2023  threathunter</span>
+                  </div>
+                </footer>
                 <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
         </body>
 </html>

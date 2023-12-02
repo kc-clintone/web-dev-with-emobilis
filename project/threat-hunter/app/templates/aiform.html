@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+                {% load static %}
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+                <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}" />
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>code analysis</title>
+                <style>
+                        .divider {
+                                height: 0.3px;
+                                background-color: rgba(0, 0, 0, 0.1);
+                                border: solid rgba(0, 0, 0, 0.15);
+                                border-width: 0.4px 0;
+                                box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+                                        inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+                        }
+			.main{ height: 73vh; }
+                </style>
+        </head>
+        <body>
+                <header class="d-flex justify-content-between p-3 align-center">
+                        <h3>Threat hunter</h3>
+                 <div class="dropdown">
+		   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="bi bi-list"></i>
+		   </button>
+		   <ul class="dropdown-menu">
+		      <li><a href="{% url 'home' %}" class="dropdown-item" type="button">Home</a></li>
+		      <li><a href="{% url 'about' %}" class="dropdown-item" type="button">About</a></li>
+		      <li><a class="dropdown-item" href="{% url 'analyse_with_ai' %}" type="button">Use AI mode</a></li>
+		      <li><a href="{% url 'signout' %}" class="btn dropdown-item" type="button">Log out</a></li>
+		    </ul>
+		  </div>       
+
+                </header>
+                <div class="divider"></div>
+                <div class="container mt-5 main">
+		<h2>Let AI do it for you</h2>
+			<form method="post" action="{% url 'analyse_with_ai' %}">
+			        {% csrf_token %}
+<div class="form-floating">
+  <textarea name="user_code" class="form-control" placeholder="Paste code here" id="floatingTextarea2" style="height: 300px"></textarea>
+  <label for="floatingTextarea2">Paste your code here and let me do the rest...</label>
+</div>
+			      
+			        <button class="btn btn-primary mt-2" type="submit">Start scan</button>
+			</form>
+                </div>
+		<footer class="footer mt-auto py-3 bg-light">
+                  <div class="container d-flex justify-content-between">
+                    <span class="text-muted text-primary">@clintone</span>
+                    <span class="text-muted">All rights reserved, &c2023  threathunter</span>
+                  </div>
+                </footer>
+                <script src="{%static 'js/bootstrap.bundle.min.js'%}"></script>
+        </body>
+</html>
+

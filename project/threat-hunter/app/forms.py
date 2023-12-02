@@ -10,7 +10,7 @@ class ExtensionUploadForm(forms.ModelForm):
         fields = ['file']
 
     widgets = {
-        'file': forms.ClearableFileInput(attrs={'class': 'form-control-file'}),
+        'file': forms.ClearableFileInput(attrs={'class': 'form-control my-3'}),
     }
 
 
@@ -21,5 +21,5 @@ class CreateUserForm(UserCreationForm):
 
 
 class LoginForm(AuthenticationForm):
-    email = forms.EmailField(widget=EmailInput())
+    username = forms.CharField(widget=TextInput())
     password = forms.CharField(widget=PasswordInput())
