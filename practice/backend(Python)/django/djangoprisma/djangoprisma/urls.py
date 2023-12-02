@@ -16,9 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import CourseList, LessonList
+from .views import CourseList, LessonList, Home
 
 urlpatterns = [
+    path('', Home.as_view(), name='home'),
     path('api/courses/', CourseList.as_view(), name='course-list'),
     path('api/lessons/', LessonList.as_view(), name='lesson-list'),
 ]
